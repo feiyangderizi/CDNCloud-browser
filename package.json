@@ -44,7 +44,7 @@
     },
     "win": {
       "target": "squirrel",
-      "icon": "src/static/brand/qiniu.ico"
+      "icon": "src/static/brand/favicon.ico"
     }
   },
   "engines": {

@@ -2,7 +2,7 @@ import Dictionary from "./dict";
 
 const dict: Dictionary = {
   common: {
-    kodoBrowser: "Kodo 浏览器",
+    kodoBrowser: "CDNCloud 上传工具",
     empty: "暂无数据",
     ok: "确认",
     cancel: "取消",

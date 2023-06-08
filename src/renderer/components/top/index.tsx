@@ -45,7 +45,6 @@ const Top: React.FC<TopProps> = ({
             alt="logo"
             src={app.logo}
             className="d-inline-block align-top"
-            width="30"
             height="30"
           />
           <span
@@ -64,7 +63,7 @@ const Top: React.FC<TopProps> = ({
             tabIndex={onClickVersion ? 0 : undefined}
             onClick={() => onClickVersion?.(app.version)}
           >
-            v{app.version}
+            v1{app.version}
           </span>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav"/>

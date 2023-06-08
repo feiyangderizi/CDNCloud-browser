@@ -64,8 +64,8 @@ let createWindow = () => {
     height: 800,
     minWidth: 1280,
     minHeight: 600,
-    title: "Kodo Browser",
-    icon: path.join(brandRoot, "qiniu.ico"),
+    title: "CDNCloud Browser",
+    icon: path.join(brandRoot, "favicon.ico"),
     webPreferences: {
       nodeIntegration: true,
       contextIsolation: false,
