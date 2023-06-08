@@ -46,7 +46,7 @@ gulp.task("mac", done => {
     let options = Object.assign({}, packagerOptions);
     options.platform = "darwin";
     options.arch = "x64";
-    options.icon = `${BRAND}/qiniu.icns`;
+    options.icon = `${BRAND}/cdncloud.icns`;
 
     packager(options).then((paths) => {
       console.log("--done");
@@ -74,7 +74,7 @@ gulp.task("dmg", done => {
     appPath: `${TARGET}/${NAME}-darwin-x64/${NAME}.app`,
     name: NAME,
     title: `${NAME}, by Qiniu`,
-    icon: `${BRAND}/qiniu.icns`,
+    icon: `${BRAND}/cdncloud.icns`,
     overwrite: true,
     debug: false,
     out: `${TARGET}/${NAME}-darwin-x64-dmg`,
@@ -97,7 +97,7 @@ gulp.task("win64", done => {
     let options = Object.assign({}, packagerOptions);
     options.platform = "win32";
     options.arch = "x64";
-    options.icon = `${BRAND}/qiniu.png`;
+    options.icon = `${BRAND}/cdncloud.png`;
 
     packager(options).then((paths) => {
       console.log("--done");
@@ -125,7 +125,7 @@ gulp.task("win32", done => {
     let options = Object.assign({}, packagerOptions);
     options.platform = "win32";
     options.arch = "ia32";
-    options.icon = `${BRAND}/qiniu.png`;
+    options.icon = `${BRAND}/cdncloud.png`;
 
     packager(options).then((paths) => {
       console.log("--done");

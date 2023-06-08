@@ -1,6 +1,6 @@
 import React from "react";
 import {Modal, ModalProps} from "react-bootstrap";
-import {shell} from "electron"
+// import {shell} from "electron"
 
 import {useI18n} from "@renderer/modules/i18n";
 import * as APP_INFO from "@common/const/app-config";
@@ -25,13 +25,12 @@ const About: React.FC<ModalProps> = (modalProps) => {
             alt="logo"
             src={APP_INFO.app.logo}
             className="d-inline-block"
-            width="30"
             height="30"
           />
           <span className="app-name">{translate("common.kodoBrowser")}</span>
           <span className="app-version">v{APP_INFO.app.version}</span>
         </div>
-        <div className="text-center">
+        {/* <div className="text-center">
           {translate("modals.about.openSourceAddress")}
           <span
             tabIndex={0}
@@ -41,7 +40,7 @@ const About: React.FC<ModalProps> = (modalProps) => {
           >
             https://github.com/qiniu/kodo-browser
           </span>
-        </div>
+        </div> */}
         <hr/>
         <PreviewUpdate/>
       </Modal.Body>

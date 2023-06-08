@@ -8,5 +8,6 @@ export const upgrade = {
   release_notes_url: "https://kodo-toolbox.qiniu.com/kodobrowser/release-notes/",
 
   // 升级检测链接
-  check_url: "https://kodo-toolbox.qiniu.com/kodobrowser/update.json"
+  check_url: ""
+  // check_url: "https://kodo-toolbox.qiniu.com/kodobrowser/update.json"
 }

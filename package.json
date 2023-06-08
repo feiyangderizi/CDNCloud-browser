@@ -3,7 +3,7 @@
   "version": "2.0.0",
   "license": "Apache-2.0",
   "author": {
-    "name": "Rong Zhou",
+    "name": "CDNCloud",
     "email": "zhourong@qiniu.com"
   },
   "licenses": [
@@ -44,7 +44,7 @@
     },
     "win": {
       "target": "squirrel",
-      "icon": "src/static/brand/favicon.ico"
+      "icon": "src/static/brand/cdncloud.ico"
     }
   },
   "engines": {

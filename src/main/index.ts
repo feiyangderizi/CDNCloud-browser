@@ -33,7 +33,7 @@ let downloadRunning = 0;
 switch (process.platform) {
 case "darwin":
   app.dock.setIcon(
-    path.join(brandRoot, "qiniu.png")
+    path.join(brandRoot, "cdncloud.png")
   );
   break;
 case "linux":
@@ -65,7 +65,7 @@ let createWindow = () => {
     minWidth: 1280,
     minHeight: 600,
     title: "CDNCloud Browser",
-    icon: path.join(brandRoot, "favicon.ico"),
+    icon: path.join(brandRoot, "cdncloud.ico"),
     webPreferences: {
       nodeIntegration: true,
       contextIsolation: false,
@@ -157,7 +157,7 @@ let createWindow = () => {
   }
 
   if (process.platform == "linux") {
-    opt.icon = path.join(brandRoot, "qiniu.png");
+    opt.icon = path.join(brandRoot, "cdncloud.png");
   }
 
   // Create the browser window.   http://electron.atom.io/docs/api/browserwindow/

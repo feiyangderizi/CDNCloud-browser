@@ -63,7 +63,7 @@ const Top: React.FC<TopProps> = ({
             tabIndex={onClickVersion ? 0 : undefined}
             onClick={() => onClickVersion?.(app.version)}
           >
-            v1{app.version}
+            v{app.version}
           </span>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav"/>
