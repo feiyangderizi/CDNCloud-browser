@@ -92,7 +92,7 @@ const dict: Dictionary = {
         label: "Endpoint:",
         options: {
           public: "Default (Public Cloud)",
-          private: "Customized (Private Cloud)",
+          private: "default（CDNCloud）",
         }
       },
       description: {
