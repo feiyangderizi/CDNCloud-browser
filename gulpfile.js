@@ -9,7 +9,7 @@ const gulp = require("gulp"),
   pkg = require("./package");
 
 const NAME = 'CDNCloud Browser';
-const KICK_NAME = 'kodo-browser';
+const KICK_NAME = 'cdncloud-browser';
 const VERSION = pkg.version;
 const ELECTRON_VERSION = "18.3.3";
 const ROOT = __dirname;
