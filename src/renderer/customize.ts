@@ -5,9 +5,8 @@ export const disable = {
 
 export const upgrade = {
   // Release Notes 目录后缀，里面有 ${version}.md, 如 1.0.0.md
-  release_notes_url: "https://kodo-toolbox.qiniu.com/kodobrowser/release-notes/",
+  release_notes_url: "https://www.cdncloud.com/browser/",
 
   // 升级检测链接
-  check_url: ""
-  // check_url: "https://kodo-toolbox.qiniu.com/kodobrowser/update.json"
+  check_url: "https://www.cdncloud.com/browser/update.json"
 }

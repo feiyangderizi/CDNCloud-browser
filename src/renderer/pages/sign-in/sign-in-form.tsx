@@ -77,11 +77,25 @@ const SignInForm: React.FC<SignInFormProps> = ({
               {...register("endpointType")}
               isInvalid={Boolean(errors.endpointType)}
             >
-              <option value={EndpointType.Public}>{translate("signIn.form.endpoint.options.public")}</option>
+              {/* <option value={EndpointType.Public}>{translate("signIn.form.endpoint.options.public")}</option> */}
               <option value={EndpointType.Private}>{translate("signIn.form.endpoint.options.private")}</option>
             </Form.Select>
           </Col>
-          {
+          <Col
+            sm={1}
+            className="d-flex justify-content-center align-items-center"
+          >
+            <Button
+              variant={isInvalidPrivateEndpointSetting ? "btn-lite-danger" : "link"}
+              className={classNames("private-endpoint-setting", {
+                "invalid-text": isInvalidPrivateEndpointSetting,
+              })}
+              onClick={onClickPrivateEndpointSetting}
+            >
+              <i className="bi bi-gear-fill"/>
+            </Button>
+          </Col>
+          {/* {
             watch("endpointType") !== EndpointType.Private
               ? null
               : <Col
@@ -98,7 +112,7 @@ const SignInForm: React.FC<SignInFormProps> = ({
                   <i className="bi bi-gear-fill"/>
                 </Button>
               </Col>
-          }
+          } */}
         </Form.Group>
 
         <Form.Group as={Row} className="mb-3" controlId="accessKey">

@@ -1,10 +1,10 @@
 {
-  "name": "kodo-browser",
-  "version": "2.0.0",
+  "name": "cdncloud-browser",
+  "version": "1.0.0",
   "license": "Apache-2.0",
   "author": {
     "name": "CDNCloud",
-    "email": "zhourong@qiniu.com"
+    "email": "info@cdncloud.com"
   },
   "licenses": [
     {
