@@ -9,7 +9,7 @@ import Settings from "@renderer/modules/settings";
 import {SettingsFormData} from "./types";
 import FieldsUpload from "./fields-upload";
 import FieldsDownload from "./fields-download";
-import FieldsExternalPath from "./fields-external-path";
+// import FieldsExternalPath from "./fields-external-path";
 import FieldsOthers from "./fields-others";
 
 import "./settings.scss";
@@ -119,7 +119,7 @@ const SettingsModal: React.FC<ModalProps> = (modalProps) => {
           >
             <FieldsUpload/>
             <FieldsDownload/>
-            <FieldsExternalPath/>
+            {/* <FieldsExternalPath/> */}
             <FieldsOthers/>
           </Form>
         </FormProvider>

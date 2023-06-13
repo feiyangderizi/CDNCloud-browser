@@ -1,4 +1,4 @@
-export const ADDR_KODO_PROTOCOL = "kodo://"
+export const ADDR_KODO_PROTOCOL = "cdncloud://"
 
 export enum Mode {
     LocalBuckets = "localBuckets",

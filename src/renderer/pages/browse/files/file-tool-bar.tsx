@@ -229,7 +229,7 @@ const FileToolBar: React.FC<FileToolBarProps> = (props) => {
       show: isShowRestoreFiles,
     },
     {
-      showModal: handleShowRestoreFiles,
+      // showModal: handleShowRestoreFiles,
       hideModal: handleHideRestoreFiles,
     },
   ] = useDisplayModal();
@@ -343,13 +343,13 @@ const FileToolBar: React.FC<FileToolBarProps> = (props) => {
                 <i className="bi bi-link-45deg me-1"/>
                 {translate("common.exportLinks")}
               </Dropdown.Item>
-              <Dropdown.Item
+              {/* <Dropdown.Item
                 onClick={handleShowRestoreFiles}
                 hidden={bucketGrantedPermission === "readonly"}
               >
                 <i className="bi bi-fire me-1"/>
                 {translate("common.restore")}
-              </Dropdown.Item>
+              </Dropdown.Item> */}
               {
                 bucketGrantedPermission === "readonly" ||
                 !availableStorageClasses ||

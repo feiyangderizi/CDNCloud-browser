@@ -135,7 +135,7 @@ const GenerateFileLinks: React.FC<ModalProps & GenerateFileLinksProps> = (props)
       return Promise.reject();
     }
 
-    const fileName = `kodo-browser-download-links-${moment().utc().format('YYYYMMDDHHmmSS')}`;
+    const fileName = `CDNCloud-browser-download-links-${moment().utc().format('YYYYMMDDHHmmSS')}`;
     let filePath = path.join(targetDirectoryPath, `${fileName}.csv`);
     for (let i = 1; fs.existsSync(filePath); i++) {
       filePath = path.join(targetDirectoryPath, `${fileName}.${i}.csv`);

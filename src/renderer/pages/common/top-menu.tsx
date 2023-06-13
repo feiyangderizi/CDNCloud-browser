@@ -89,17 +89,17 @@ const TopMenu: React.FC<TopMenuProps> = ({
     });
   }
 
-  const handleClickExternalPath = () => {
-    if (location.pathname.startsWith(RouterPath.Browse) && isBrowseWithExternalMode) {
-      return;
-    }
-    navigate(RouterPath.Browse);
-    onActiveKodoAddress({
-      protocol: ADDR_KODO_PROTOCOL,
-      path: "",
-      regionId: "",
-    });
-  }
+  // const handleClickExternalPath = () => {
+  //   if (location.pathname.startsWith(RouterPath.Browse) && isBrowseWithExternalMode) {
+  //     return;
+  //   }
+  //   navigate(RouterPath.Browse);
+  //   onActiveKodoAddress({
+  //     protocol: ADDR_KODO_PROTOCOL,
+  //     path: "",
+  //     regionId: "",
+  //   });
+  // }
 
   // settings
   const [
@@ -154,15 +154,15 @@ const TopMenu: React.FC<TopMenuProps> = ({
     aboutItem,
   ];
   if (enabledExternalPath) {
-    singedInMenuItems.splice(1, 0,
-      {
-        id: "top.externalPath",
-        type: MenuItemType.Link,
-        active: location.pathname.startsWith(RouterPath.Browse) && isBrowseWithExternalMode,
-        iconClassName: "bi bi-signpost-2-fill me-1",
-        text: translate("top.externalPath"),
-        onClick: handleClickExternalPath,
-      });
+    // singedInMenuItems.splice(1, 0,
+    //   {
+    //     id: "top.externalPath",
+    //     type: MenuItemType.Link,
+    //     active: location.pathname.startsWith(RouterPath.Browse) && isBrowseWithExternalMode,
+    //     iconClassName: "bi bi-signpost-2-fill me-1",
+    //     text: translate("top.externalPath"),
+    //     onClick: handleClickExternalPath,
+    //   });
   }
 
   return (
