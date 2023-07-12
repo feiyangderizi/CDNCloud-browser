@@ -1,12 +1,17 @@
 import React, {useCallback, useEffect, useState} from "react";
-import {Button, Col, Form, Modal, ModalProps, Row} from "react-bootstrap";
-import {toast} from "react-hot-toast";
-import {SubmitHandler, useFieldArray, useForm} from "react-hook-form";
+import {
+  // Button,
+  Col, Form, Modal, ModalProps, Row} from "react-bootstrap";
+// import {toast} from "react-hot-toast";
+import {
+  // SubmitHandler,
+  useFieldArray,
+  useForm} from "react-hook-form";
 import lodash from "lodash";
 
 import {HttpUrl} from "@renderer/const/patterns";
 import {useI18n} from "@renderer/modules/i18n";
-import * as LocalLogger from "@renderer/modules/local-logger";
+// import * as LocalLogger from "@renderer/modules/local-logger";
 import {Endpoint, isQueryRegionAPIAvailable, privateEndpointPersistence} from "@renderer/modules/qiniu-client";
 
 import RegionInputs from "./region-inputs";
@@ -22,7 +27,7 @@ const PrivateCloudSettings: React.FC<ModalProps & PrivateCloudSettingsProps> = (
   const {translate} = useI18n();
 
   const {
-    handleSubmit,
+    // handleSubmit,
     control,
     getValues,
     setValue,
@@ -36,20 +41,20 @@ const PrivateCloudSettings: React.FC<ModalProps & PrivateCloudSettingsProps> = (
 
   const {
     fields,
-    append,
+    // append,
     remove,
   } = useFieldArray({
     control,
     name: "regions",
   });
 
-  const handleSavePrivateCloudSettings: SubmitHandler<Endpoint> = (data) => {
-    LocalLogger.debug("save private cloud settings", data);
-    privateEndpointPersistence.save(data);
-    toast.success(translate("common.saved"));
-    onSaved(data);
-    modalProps.onHide?.();
-  };
+  // const handleSavePrivateCloudSettings: SubmitHandler<Endpoint> = (data) => {
+  //   LocalLogger.debug("save private cloud settings", data);
+  //   privateEndpointPersistence.save(data);
+  //   toast.success(translate("common.saved"));
+  //   onSaved(data);
+  //   modalProps.onHide?.();
+  // };
 
   useEffect(() => {
     reset(privateEndpointPersistence.read());
@@ -96,12 +101,12 @@ const PrivateCloudSettings: React.FC<ModalProps & PrivateCloudSettingsProps> = (
         <Form>
           <fieldset disabled={isSubmitting}>
             <div className="sticky-top bg-body p-3">
-              <Button className="text-white" variant="info" size="sm" disabled={isSubmitting} onClick={() => {
+              {/* <Button className="text-white" variant="info" size="sm" disabled={isSubmitting} onClick={() => {
                 append({identifier: "", label: "", endpoint: ""})
               }}>
                 <i className="bi bi-plus-circle-fill me-1"/>
                 {translate("modals.privateCloudSettings.appendRegionButton")}
-              </Button>
+              </Button> */}
               <Form.Group as={Row} className="mb-3" controlId="privateCloudSettingUcUrl">
                 <Form.Label className="text-end" column sm={4}>
                   <span className="text-danger">*</span>{translate("modals.privateCloudSettings.form.ucUrl.label")}
@@ -171,7 +176,7 @@ const PrivateCloudSettings: React.FC<ModalProps & PrivateCloudSettingsProps> = (
           </fieldset>
         </Form>
       </Modal.Body>
-      <Modal.Footer>
+      {/* <Modal.Footer>
         <Button
           variant="primary"
           size="sm"
@@ -187,7 +192,7 @@ const PrivateCloudSettings: React.FC<ModalProps & PrivateCloudSettingsProps> = (
         >
           {translate("common.cancel")}
         </Button>
-      </Modal.Footer>
+      </Modal.Footer> */}
     </Modal>
   );
 };

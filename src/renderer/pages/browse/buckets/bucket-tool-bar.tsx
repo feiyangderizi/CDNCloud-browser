@@ -1,5 +1,9 @@
 import React, {ChangeEvent, useCallback} from "react";
-import {Button, ButtonGroup, Dropdown, Form, InputGroup} from "react-bootstrap";
+import {
+  Button,
+  ButtonGroup,
+  // Dropdown,
+  Form, InputGroup} from "react-bootstrap";
 import lodash from "lodash";
 
 import * as customize from "@renderer/customize";
@@ -53,7 +57,7 @@ const BucketToolBar: React.FC<BucketToolBarProps> = ({
       show:isShowDeleteBucket,
     },
     {
-      showModal: handleClickDeleteBucket,
+      // showModal: handleClickDeleteBucket,
       hideModal: handleHideDeleteBucket,
     },
   ] = useDisplayModal();
@@ -70,22 +74,22 @@ const BucketToolBar: React.FC<BucketToolBarProps> = ({
           </Button>
         }
         {
-          !customize.disable.deleteBucket &&
-          <Dropdown className="d-inline ms-1">
-            <Dropdown.Toggle disabled={!selectedBucket} variant="outline-solid-gray-300" size="sm">
-              {translate("common.more")}
-            </Dropdown.Toggle>
+          // !customize.disable.deleteBucket &&
+          // <Dropdown className="d-inline ms-1">
+          //   <Dropdown.Toggle disabled={!selectedBucket} variant="outline-solid-gray-300" size="sm">
+          //     {translate("common.more")}
+          //   </Dropdown.Toggle>
 
-            <Dropdown.Menu>
-              <Dropdown.Item
-                disabled={selectedBucket?.grantedPermission === "readonly"}
-                onClick={handleClickDeleteBucket}
-              >
-                <i className="bi bi-x-lg me-1 text-danger"/>
-                {translate("browse.bucketToolbar.moreOperation.deleteBucketButton")}
-              </Dropdown.Item>
-            </Dropdown.Menu>
-          </Dropdown>
+          //   <Dropdown.Menu>
+          //     <Dropdown.Item
+          //       disabled={selectedBucket?.grantedPermission === "readonly"}
+          //       onClick={handleClickDeleteBucket}
+          //     >
+          //       <i className="bi bi-x-lg me-1 text-danger"/>
+          //       {translate("browse.bucketToolbar.moreOperation.deleteBucketButton")}
+          //     </Dropdown.Item>
+          //   </Dropdown.Menu>
+          // </Dropdown>
         }
         <InputGroup size="sm" className="ms-auto w-25">
           <Form.Control

@@ -92,7 +92,7 @@ const dict: Dictionary = {
         label: "Endpoint：",
         options: {
           public: "默认（公有云）",
-          private: "默认（CDNCloud）",
+          private: "香港节点",
         }
       },
       description: {

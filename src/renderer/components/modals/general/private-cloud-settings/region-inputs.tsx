@@ -1,4 +1,6 @@
-import {Button, Col, Form, FormControlProps, Row} from "react-bootstrap";
+import {
+  // Button,
+  Col, Form, FormControlProps, Row} from "react-bootstrap";
 import React from "react";
 import {FieldErrors} from "react-hook-form";
 
@@ -23,7 +25,7 @@ const RegionInputs: React.FC<RegionInputsProps> = ({
   regionIdentifierControlProps,
   regionNameControlProps,
   regionEndpointControlProps,
-  onRemove,
+  // onRemove,
 }) => {
   const {translate} = useI18n();
 
@@ -32,12 +34,12 @@ const RegionInputs: React.FC<RegionInputsProps> = ({
       <Row className="justify-content-between sticky-top bg-body" style={{top: "7.3125rem"}}>
         <Col>{translate("modals.privateCloudSettings.region")}{groupNameSuffix}</Col>
         {
-          onRemove &&
-          <Col className="text-end">
-            <Button variant="lite-danger" size="sm" onClick={onRemove}>
-              {translate("modals.privateCloudSettings.removeRegionButton")}
-            </Button>
-          </Col>
+          // onRemove &&
+          // <Col className="text-end">
+          //   <Button variant="lite-danger" size="sm" onClick={onRemove}>
+          //     {translate("modals.privateCloudSettings.removeRegionButton")}
+          //   </Button>
+          // </Col>
         }
       </Row>
       <hr className="mt-0"/>
