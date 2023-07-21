@@ -42,7 +42,7 @@ const RegionInputs: React.FC<RegionInputsProps> = ({
           // </Col>
         }
       </Row>
-      <hr className="mt-0"/>
+      <hr/>
       <Form.Group as={Row} className="mb-3" controlId={`regionIdentifier-${id}`}>
         <Form.Label className="text-end" column sm={4}>
           <span className="text-danger">*</span>{translate("modals.privateCloudSettings.form.regionIdentifier.label")}

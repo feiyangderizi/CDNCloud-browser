@@ -48,7 +48,7 @@ class PrivateEndpointPersistence {
       return DEFAULT_ENDPOINT;
     }
     // let data = JSON.parse(jsonStrData);
-    let data = {"uc_url":"https://bucket.7oss-hk.cdncloud.com","regions":[{"id":"hk","label":"香港","endpoint":"https://s3.7oss-hk.cdncloud.com"}]}
+    let data = {"uc_url":"https://bucket.hk02.1113oss.com","regions":[{"id":"hk","label":"香港","endpoint":"https://s3.hk02.1113oss.com"}]}
     return {
       // Backward Compatibility
       ucUrl: data.uc_url,
