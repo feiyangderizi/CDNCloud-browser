@@ -6,7 +6,7 @@ import {
   Form, InputGroup} from "react-bootstrap";
 import lodash from "lodash";
 
-import * as customize from "@renderer/customize";
+// import * as customize from "@renderer/customize";
 
 import {useI18n} from "@renderer/modules/i18n";
 import {BucketItem} from "@renderer/modules/qiniu-client";
@@ -47,7 +47,7 @@ const BucketToolBar: React.FC<BucketToolBarProps> = ({
       show:isShowCreateBucket,
     },
     {
-      showModal: handleClickCreateBucket,
+      // showModal: handleClickCreateBucket,
       hideModal: handleHideCreateBucket,
     },
   ] = useDisplayModal();
@@ -67,11 +67,11 @@ const BucketToolBar: React.FC<BucketToolBarProps> = ({
     <div className="m-1">
       <div className="d-flex">
         {
-          !customize.disable.createBucket &&
-          <Button className="text-white" variant="info" size="sm" onClick={handleClickCreateBucket}>
-            <i className="bi bi-database-add me-1"/>
-            {translate("browse.bucketToolbar.createBucketButton")}
-          </Button>
+          // !customize.disable.createBucket &&
+          // <Button className="text-white" variant="info" size="sm" onClick={handleClickCreateBucket}>
+          //   <i className="bi bi-database-add me-1"/>
+          //   {translate("browse.bucketToolbar.createBucketButton")}
+          // </Button>
         }
         {
           // !customize.disable.deleteBucket &&
